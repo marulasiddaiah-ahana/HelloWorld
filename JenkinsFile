@@ -12,9 +12,9 @@ pipeline {
         stage('Build') {
             steps {
             sh "pwd"
-                dir('HelloWorld') {
+                dir('HelloWorld/src') {
                     sh "pwd"
-                    sh "cd src"
+                    sh "ls"
                     sh "javac WelcomeClassExample.java"
                     sh "java WelcomeClassExample"
                 }
