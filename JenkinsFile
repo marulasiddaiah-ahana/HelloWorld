@@ -14,6 +14,9 @@ pipeline {
             sh "pwd"
                 dir('HelloWorld') {
                     sh "pwd"
+                    cd "src"
+                    javac WelcomeClassExample.java
+                    java WelcomeClassExample
                 }
             sh "pwd"
                 echo "what inside the files"
@@ -23,7 +26,7 @@ pipeline {
     
         stage('Deploy') {
             steps {
-                echo 'Hello World'
+                echo 'We have deployed the sample java application'
             }
         }
     }
