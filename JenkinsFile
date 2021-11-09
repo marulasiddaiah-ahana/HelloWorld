@@ -11,7 +11,7 @@ pipeline {
     
         stage('Build') {
             steps {
-                cd src
+                cd /src
                 echo "what inside the files"
             }
         }
