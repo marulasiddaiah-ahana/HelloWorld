@@ -12,8 +12,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh "pwd"
-                dir('HelloWorld'){
-                sh "pwd"
+                dir("${env.WORKSPACE}/src"){
+                    sh "pwd"
                 }
                 echo "what inside the files"
             }
