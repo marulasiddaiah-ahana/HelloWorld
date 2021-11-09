@@ -11,12 +11,6 @@ pipeline {
     
         stage('Build') {
             steps {
-                sh "pwd"
-                echo "before"
-                dir('${env.WORKSPACE}'){
-                echo "inside"
-                    sh "pwd"
-                }
                 echo "what inside the files"
             }
         }
