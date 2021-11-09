@@ -7,16 +7,16 @@ pipeline {
                 echo 'Welcome to Jenkins Automation'
             }
         }
-    }
-    stages {
+    
+    
         stage('Build') {
             steps {
                 cd 
                 ls
             }
         }
-    }
-    stages {
+    
+    
         stage('Deploy') {
             steps {
                 echo 'Hello World'
