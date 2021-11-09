@@ -12,7 +12,9 @@ pipeline {
         stage('Build') {
             steps {
                 sh "pwd"
-                dir("${env.WORKSPACE}"){
+                echo "before"
+                dir('${env.WORKSPACE}'){
+                echo "inside"
                     sh "pwd"
                 }
                 echo "what inside the files"
