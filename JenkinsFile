@@ -14,9 +14,9 @@ pipeline {
             sh "pwd"
                 dir('HelloWorld') {
                     sh "pwd"
-                    cd "src"
-                    javac WelcomeClassExample.java
-                    java WelcomeClassExample
+                    sh "cd src"
+                    sh "javac WelcomeClassExample.java"
+                    sh "java WelcomeClassExample"
                 }
             sh "pwd"
                 echo "what inside the files"
