@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Welcome to Jenkins Automation'
+            }
+        }
+    
+    
+        stage('Build') {
+            steps {
+            sh "pwd"
+                dir('src') {
+                    sh "pwd"
+                    sh "ls"
+                    sh "javac WelcomeClassExample.java"
+                    sh "java WelcomeClassExample"
+                }
+            sh "pwd"
+                echo "what inside the files"
+            }
+        }
+    
+    
+        stage('Deploy') {
+            steps {
+                echo 'We have deployed the sample java application'
+            }
+        }
+    }
+}
